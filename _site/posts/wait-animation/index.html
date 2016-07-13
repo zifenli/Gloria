@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>按钮等待动画</title>
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/zifen/blog/assets/css/main.css">
+	<link rel="stylesheet" href="/zifen/blog/assets/themes/reset.css">
+	<!-- <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,400italic%7CSignika:700,300,400,600' rel='stylesheet' type='text/css'> -->
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/zifen/blog/">主页</a>
+		<!-- Nav pages -->
+	  
+	    
+	      <a href="/zifen/blog//about.html" title="关于">关于</a>
+	    
+	  
+	    
+	  
+	    
+	      <a href="/zifen/blog//category.html" title="分类页面">分类页面</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://github.com/KingFelix/emerald/archive/master.zip">下载</a>
+<a href="https://github.com/zifenli/F_Gloria">在Github上查看</a>
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.1.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a href="#" id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header">
+	<a href="/zifen/blog/">
+		<img src="/zifen/blog/assets/img/emerald.svg" alt="Emerald Logo">
+	  <h1>LIZIFEN</h1>
+	</a>
+</header>
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			<article id="post-page">
+	<h2>按钮等待动画</h2>		
+	<time datetime="2015-08-04T00:00:00+08:00" class="by-line">04 Aug 2015</time>
+	<div class="content">
+
+		<p>最近项目中遇到了这样一个问题：用户填写完成后点击提交按钮时，在点击和服务器返回数据之间的这一段时间，由于按钮没有任何反馈，用户以为没有触发点击事件，导致点击多次，事实上，这样会触发多次提交。这种交互，对于客户和开发人员都是不友好的，为了进一步增进用户体验，我们决定为按钮添加实时的反馈，以减少多次提交
+这就涉及到了等待动画（当然，也可以用非动画），在强大的CSS3面前，这些已经是小菜一碟。以下是三种实现方法(有的是参考别人的):…</p>
+
+<h3 id="css3">CSS3实现的提交等待动画：三种</h3>
+<p>html</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno">1</span> <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;dotBtn&quot;</span><span class="nt">&gt;</span>处理中<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;dotting&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span></code></pre></div>
+
+<h4 id="box-shadow">1、box-shadow实现</h4>
+<p>这种方法的原理是：利用阴影叠加，横向分别设置一个，两个，三个阴影。</p>
+
+<p>css</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="lineno"> 1</span> <span class="nc">.dotting</span><span class="p">{</span>
+<span class="lineno"> 2</span> 	<span class="k">display</span><span class="o">:</span><span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
+<span class="lineno"> 3</span> 	<span class="k">width</span><span class="o">:</span><span class="m">2px</span><span class="p">;</span>
+<span class="lineno"> 4</span> 	<span class="k">height</span><span class="o">:</span><span class="m">2px</span><span class="p">;</span>
+<span class="lineno"> 5</span> 	<span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">animation</span><span class="o">:</span><span class="n">dots1</span> <span class="m">2s</span> <span class="n">infinite</span> <span class="n">step</span><span class="o">-</span><span class="n">start</span><span class="p">;</span>
+<span class="lineno"> 6</span> 	<span class="n">animation</span><span class="o">:</span><span class="n">dots</span> <span class="m">2s</span> <span class="n">infinite</span> <span class="n">step</span><span class="o">-</span><span class="n">start</span><span class="p">;</span>
+<span class="lineno"> 7</span> 	
+<span class="lineno"> 8</span> <span class="p">}</span>
+<span class="lineno"> 9</span> <span class="k">@keyframes</span> <span class="nt">dots</span><span class="p">{</span>
+<span class="lineno">10</span> 	<span class="nt">25</span><span class="o">%</span><span class="p">{</span><span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span><span class="m">2px</span> <span class="m">0</span> <span class="nb">white</span><span class="p">;}</span>
+<span class="lineno">11</span> 	<span class="nt">50</span><span class="o">%</span><span class="p">{</span><span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span><span class="m">2px</span> <span class="m">0</span> <span class="nb">white</span><span class="o">,</span><span class="m">6px</span> <span class="m">0</span> <span class="nb">white</span><span class="p">;}</span>
+<span class="lineno">12</span> 	<span class="nt">75</span><span class="o">%</span><span class="p">{</span><span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span><span class="m">2px</span> <span class="m">0</span> <span class="nb">white</span><span class="o">,</span><span class="m">6px</span> <span class="m">0</span> <span class="nb">white</span><span class="o">,</span><span class="m">10px</span> <span class="m">0</span> <span class="nb">white</span><span class="p">;}</span>
+<span class="lineno">13</span> <span class="p">}</span>
+<span class="lineno">14</span> <span class="k">@-webkit-keyframes</span> <span class="nt">dots</span><span class="p">{</span>
+<span class="lineno">15</span> 	<span class="nt">25</span><span class="o">%</span><span class="p">{</span><span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span><span class="m">2px</span> <span class="m">0</span> <span class="nb">white</span><span class="p">;}</span>
+<span class="lineno">16</span> 	<span class="nt">50</span><span class="o">%</span><span class="p">{</span><span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span><span class="m">2px</span> <span class="m">0</span> <span class="nb">white</span><span class="o">,</span><span class="m">6px</span> <span class="m">0</span> <span class="nb">white</span><span class="p">;}</span>
+<span class="lineno">17</span> 	<span class="nt">75</span><span class="o">%</span><span class="p">{</span><span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span><span class="m">2px</span> <span class="m">0</span> <span class="nb">white</span><span class="o">,</span><span class="m">6px</span> <span class="m">0</span> <span class="nb">white</span><span class="o">,</span><span class="m">10px</span> <span class="m">0</span> <span class="nb">white</span><span class="p">;}</span>
+<span class="lineno">18</span> <span class="p">}</span></code></pre></div>
+
+<p><button class="dotBtn">处理中<span class="dotting-1"></span></button></p>
+
+<h4 id="border-background">2、border-background实现</h4>
+<p>这种方法的原理是：利用左右边框+背景色，注意，该方法必须要设置background-clip: content-box;不然背景色会填充包括padding在内的所有区域。</p>
+
+<p>css</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="lineno"> 1</span> <span class="nc">.dotting</span><span class="p">{</span>
+<span class="lineno"> 2</span> 	<span class="k">display</span><span class="o">:</span><span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
+<span class="lineno"> 3</span> 	<span class="k">width</span><span class="o">:</span><span class="m">10px</span><span class="p">;</span>
+<span class="lineno"> 4</span> 	<span class="k">height</span><span class="o">:</span><span class="m">2px</span><span class="p">;</span>
+<span class="lineno"> 5</span> 	<span class="k">padding-left</span><span class="o">:</span><span class="m">2px</span><span class="p">;</span>
+<span class="lineno"> 6</span> 	<span class="k">padding-right</span><span class="o">:</span><span class="m">2px</span><span class="p">;</span>
+<span class="lineno"> 7</span> 	<span class="k">background-color</span><span class="o">:</span><span class="n">currentColor</span><span class="p">;</span>
+<span class="lineno"> 8</span> 	<span class="k">background</span><span class="o">-</span><span class="k">clip</span><span class="o">:</span> <span class="k">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+<span class="lineno"> 9</span> 	<span class="k">border</span><span class="o">:</span><span class="m">2px</span> <span class="k">solid</span> <span class="n">currentColor</span><span class="p">;</span>
+<span class="lineno">10</span> 	<span class="k">border-top</span><span class="o">:</span><span class="k">none</span><span class="p">;</span>
+<span class="lineno">11</span> 	<span class="k">border-bottom</span><span class="o">:</span><span class="k">none</span><span class="p">;</span>	
+<span class="lineno">12</span> 	<span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">animation</span><span class="o">:</span><span class="n">dots</span> <span class="m">2s</span> <span class="n">infinite</span> <span class="n">step</span><span class="o">-</span><span class="n">start</span><span class="p">;</span>
+<span class="lineno">13</span> 	<span class="n">animation</span><span class="o">:</span><span class="n">dots</span> <span class="m">2s</span> <span class="n">infinite</span> <span class="n">step</span><span class="o">-</span><span class="n">start</span><span class="p">;</span>
+<span class="lineno">14</span> <span class="p">}</span>
+<span class="lineno">15</span> <span class="k">@keyframes</span> <span class="nt">dots</span><span class="p">{</span>
+<span class="lineno">16</span> 	<span class="nt">25</span><span class="o">%</span><span class="p">{</span><span class="k">background-color</span><span class="o">:</span><span class="k">transparent</span><span class="p">;</span><span class="k">border-right</span><span class="o">:</span><span class="k">transparent</span><span class="p">;</span><span class="k">border-left</span><span class="o">:</span><span class="k">transparent</span><span class="p">;}</span>
+<span class="lineno">17</span> 	<span class="nt">50</span><span class="o">%</span><span class="p">{</span><span class="k">background-color</span><span class="o">:</span><span class="k">transparent</span><span class="p">;</span><span class="k">border-right</span><span class="o">:</span><span class="k">transparent</span><span class="p">;}</span>
+<span class="lineno">18</span> 	<span class="nt">75</span><span class="o">%</span><span class="p">{</span><span class="k">border-right</span><span class="o">:</span><span class="k">transparent</span><span class="p">;}</span>
+<span class="lineno">19</span> <span class="p">}</span>
+<span class="lineno">20</span> <span class="k">@-webkit-keyframes</span> <span class="nt">dots</span><span class="p">{</span>
+<span class="lineno">21</span> 	<span class="nt">25</span><span class="o">%</span><span class="p">{</span><span class="k">background-color</span><span class="o">:</span><span class="k">transparent</span><span class="p">;</span><span class="k">border-right</span><span class="o">:</span><span class="k">transparent</span><span class="p">;</span><span class="k">border-left</span><span class="o">:</span><span class="k">transparent</span><span class="p">;}</span>
+<span class="lineno">22</span> 	<span class="nt">50</span><span class="o">%</span><span class="p">{</span><span class="k">background-color</span><span class="o">:</span><span class="k">transparent</span><span class="p">;</span><span class="k">border-right</span><span class="o">:</span><span class="k">transparent</span><span class="p">;}</span>
+<span class="lineno">23</span> 	<span class="nt">75</span><span class="o">%</span><span class="p">{</span><span class="k">border-right</span><span class="o">:</span><span class="k">transparent</span><span class="p">;}</span>
+<span class="lineno">24</span> <span class="p">}</span></code></pre></div>
+
+<p><button class="dotBtn">处理中<span class="dotting-2"></span></button></p>
+
+<h4 id="width">3、width实现</h4>
+<p>这种方法的原理是：在不同时间改变元素的宽度，让溢出部分隐藏。</p>
+
+<p>html</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno">1</span> <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;dotBtn&quot;</span><span class="nt">&gt;</span>处理中<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;dotting&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/span&gt;&lt;/button&gt;</span></code></pre></div>
+
+<p>css</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="lineno"> 1</span> <span class="nc">.dotting</span><span class="p">{</span>
+<span class="lineno"> 2</span> 	<span class="k">position</span><span class="o">:</span><span class="k">absolute</span><span class="p">;</span>
+<span class="lineno"> 3</span> 	<span class="k">display</span><span class="o">:</span><span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
+<span class="lineno"> 4</span> 	<span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">animation</span><span class="o">:</span><span class="n">dots</span> <span class="m">2s</span> <span class="n">infinite</span> <span class="n">step</span><span class="o">-</span><span class="n">start</span><span class="p">;</span>
+<span class="lineno"> 5</span> 	<span class="n">animation</span><span class="o">:</span><span class="n">dots</span> <span class="m">2s</span> <span class="n">infinite</span> <span class="n">step</span><span class="o">-</span><span class="n">start</span><span class="p">;</span>
+<span class="lineno"> 6</span> 	<span class="k">overflow</span><span class="o">:</span><span class="k">hidden</span><span class="p">;</span>
+<span class="lineno"> 7</span> 	<span class="k">vertical-align</span><span class="o">:</span> <span class="k">bottom</span><span class="p">;</span>
+<span class="lineno"> 8</span> <span class="p">}</span>
+<span class="lineno"> 9</span> <span class="k">@keyframes</span> <span class="nt">dots</span><span class="p">{</span>
+<span class="lineno">10</span> 	<span class="nt">0</span><span class="o">%</span><span class="p">{</span><span class="k">width</span><span class="o">:</span><span class="m">0px</span><span class="p">;}</span>
+<span class="lineno">11</span> 	<span class="nt">25</span><span class="o">%</span><span class="p">{</span><span class="k">width</span><span class="o">:</span><span class="m">4px</span><span class="p">;}</span>
+<span class="lineno">12</span> 	<span class="nt">50</span><span class="o">%</span><span class="p">{</span><span class="k">width</span><span class="o">:</span><span class="m">10px</span><span class="p">;}</span>
+<span class="lineno">13</span> 	<span class="nt">75</span><span class="o">%</span><span class="p">{</span><span class="k">width</span><span class="o">:</span><span class="m">14px</span><span class="p">;}</span>
+<span class="lineno">14</span> 	<span class="nt">100</span><span class="o">%</span><span class="p">{</span><span class="k">width</span><span class="o">:</span><span class="m">0px</span><span class="p">;}</span>
+<span class="lineno">15</span> <span class="p">}</span>
+<span class="lineno">16</span> <span class="k">@-webkit-keyframes</span> <span class="nt">dots</span><span class="p">{</span>
+<span class="lineno">17</span> 	<span class="nt">0</span><span class="o">%</span><span class="p">{</span><span class="k">width</span><span class="o">:</span><span class="m">0px</span><span class="p">;}</span>
+<span class="lineno">18</span> 	<span class="nt">25</span><span class="o">%</span><span class="p">{</span><span class="k">width</span><span class="o">:</span><span class="m">4px</span><span class="p">;}</span>
+<span class="lineno">19</span> 	<span class="nt">50</span><span class="o">%</span><span class="p">{</span><span class="k">width</span><span class="o">:</span><span class="m">10px</span><span class="p">;}</span>
+<span class="lineno">20</span> 	<span class="nt">75</span><span class="o">%</span><span class="p">{</span><span class="k">width</span><span class="o">:</span><span class="m">14px</span><span class="p">;}</span>
+<span class="lineno">21</span> 	<span class="nt">100</span><span class="o">%</span><span class="p">{</span><span class="k">width</span><span class="o">:</span><span class="m">0px</span><span class="p">;}</span>
+<span class="lineno">22</span> <span class="p">}</span></code></pre></div>
+
+<p><button class="dotBtn">处理中<span class="dotting-3">…</span></button></p>
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- Pagination links -->
+      
+
+	  </div>
+	    
+	    <!-- Footer -->
+	    <footer class="pagefooter"><span>@2015 - Lizifen</span></footer>
+
+	    <!-- Script -->
+      <script src="/zifen/blog/assets/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>

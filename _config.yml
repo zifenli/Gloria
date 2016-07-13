@@ -1,0 +1,43 @@
+encoding: utf-8
+
+# Site settings
+title: Lizifen's blog
+description: "something about my experiences, build with Jekyll."
+url: "http://www.jacoporabolini.com/emerald"
+author:
+  name: "lizifen"
+  email: "zifenli@gmail.com"
+  url: "http://www.jacoporabolini.com"
+
+# Build settings
+baseurl: /zifen/blog/ # Change this to your relative path (ex: /blog/), or leave just a /
+markdown: kramdown
+source: .
+destination: ./_site
+permalink: /posts/:title
+paginate: 8
+paginate_path: /page:num/
+
+# Default values
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Custom variables
+version: "1.1.0"
+
+# Options
+custom_header: false
+custom_nav_footer: false
+reverse: false
+
+
+BASE_PATH : /
+ASSET_PATH : /assets/themes
+
+excerpt_separator : ...
+

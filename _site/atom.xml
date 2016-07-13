@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Lizifen's blog</title>
+ <link href="http://www.jacoporabolini.com/emerald/atom.xml" rel="self"/>
+ <id>http://www.jacoporabolini.com/emerald</id>
+ <updated>2016-07-13T11:45:57+08:00</updated>
+ <author>
+   <name>lizifen</name>
+   <uri>http://www.jacoporabolini.com</uri>
+   <email>zifenli@gmail.com</email>
+ </author>
+
+ 
+
+ <entry>
+   <title>CSS3 drop-shadow赋色</title>
+   <link href="http://www.jacoporabolini.com/emerald/posts/png-color"/>
+   <id>http://www.jacoporabolini.com/emerald/posts/png-color</id>
+   <updated>2016-07-12T00:00:00+08:00</updated>
+   <content type="html">&lt;p&gt;png小图标CSS赋色演示实例页面,代码如下…&lt;/p&gt; &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; .icon { &lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; display: inline-block; &lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt; width: 20px; height: 20px; &lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt; overflow: hidden; &lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt; } &lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt; .icon-del { &lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt; background: url(delete.png) no-repeat center; &lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt; } &lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt; .icon...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>CSS3过渡-Dock</title>
+   <link href="http://www.jacoporabolini.com/emerald/posts/transition"/>
+   <id>http://www.jacoporabolini.com/emerald/posts/transition</id>
+   <updated>2015-08-07T00:00:00+08:00</updated>
+   <content type="html">&lt;p&gt;事实上，这样会触发多次提交。这种交互，对于客户和开发人员都是不友好的，为了进一步增进用户体验，我们决定为按钮添加实时的反馈，以减少多次提交 这就涉及到了等待动画（当然，也可以用非动画），在强大的CSS3面前，这些已经是小菜一碟。以下是三种实现方法(有的是参考别人的):…&lt;/p&gt; &lt;div class=&quot;dock-wrapper&quot;&gt; &lt;div class=&quot;content&quot;&gt; &lt;h1&gt;CSS Dock&lt;/h1&gt; &lt;div class=&quot;dock&quot;&gt; &lt;ul&gt; &lt;li id=&quot;mail&quot;&gt; &lt;a href=&quot;#mail&quot;&gt; &lt;em&gt;&lt;span&gt;Mail&lt;/span&gt;&lt;/em&gt; &lt;img src=&quot;/zifen/blog/assets/img/01.png&quot; /&gt; &lt;/a&gt; &lt;/li&gt; &lt;li id=&quot;ical&quot;&gt; &lt;a href=&quot;#ical&quot;&gt; &lt;em&gt;&lt;span&gt;cal&lt;/span&gt;&lt;/em&gt; &lt;img src=&quot;/zifen/blog/assets/img/02.png&quot; /&gt; &lt;/a&gt; &lt;/li&gt; &lt;li id=&quot;idisk&quot;&gt; &lt;a href=&quot;#idisk&quot;&gt; &lt;em&gt;&lt;span&gt;idisk&lt;/span&gt;&lt;/em&gt; &lt;img src=&quot;/zifen/blog/assets/img/03.png&quot; /&gt; &lt;/a&gt; &lt;/li&gt; &lt;li id=&quot;iphoto&quot;&gt; &lt;a href=&quot;#iphoto&quot;&gt; &lt;em&gt;&lt;span&gt;iphoto&lt;/span&gt;&lt;/em&gt; &lt;img src=&quot;/zifen/blog/assets/img/04.png&quot; /&gt; &lt;/a&gt;...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>CSS3纹理</title>
+   <link href="http://www.jacoporabolini.com/emerald/posts/css3-texture"/>
+   <id>http://www.jacoporabolini.com/emerald/posts/css3-texture</id>
+   <updated>2015-08-07T00:00:00+08:00</updated>
+   <content type="html">事实上，这样会触发多次提交。这种交互，对于客户和开发人员都是不友好的，为了进一步增进用户体验，我们决定为按钮添加实时的反馈，以减少多次提交
+这就涉及到了等待动画（当然，也可以用非动画），在强大的CSS3面前，这些已经是小菜一碟。以下是三种实现方法(有的是参考别人的):...
+1、渐变
+&lt;div class=&quot;parents pt1&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;parents pt2&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;parents pt3&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;parents pt4&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;parents pt5&quot;&gt;&lt;/div&gt;
+</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>CSS3 3D变形</title>
+   <link href="http://www.jacoporabolini.com/emerald/posts/3D"/>
+   <id>http://www.jacoporabolini.com/emerald/posts/3D</id>
+   <updated>2015-08-07T00:00:00+08:00</updated>
+   <content type="html">&lt;p&gt;事实上，这样会触发多次提交。这种交互，对于客户和开发人员都是不友好的，为了进一步增进用户体验，我们决定为按钮添加实时的反馈，以减少多次提交
+这就涉及到了等待动画（当然，也可以用非动画），在强大的CSS3面前，这些已经是小菜一碟。以下是三种实现方法(有的是参考别人的):…&lt;/p&gt;
+
+&lt;p&gt;1、2D变形制作立方体&lt;/p&gt;
+&lt;div class=&quot;stage&quot;&gt;
+	&lt;div class=&quot;container2d&quot;&gt;
+		&lt;div class=&quot;side top&quot;&gt;TOP&lt;/div&gt;
+		&lt;div class=&quot;side left&quot;&gt;LEFT&lt;/div&gt;
+		&lt;div class=&quot;side right&quot;&gt;RIGHT&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p style=&quot;clear:both&quot;&gt;2、3D变形制作立方体&lt;/p&gt;
+&lt;div class=&quot;stage&quot;&gt;
+
+	&lt;div class=&quot;container3d&quot;&gt;
+		&lt;div class=&quot;side top&quot;&gt;TOP&lt;/div&gt;
+		&lt;div class=&quot;side left&quot;&gt;LEFT&lt;/div&gt;
+		&lt;div class=&quot;side right&quot;&gt;RIGHT&lt;/div&gt;
+		&lt;div class=&quot;side bottom&quot;&gt;BOTTOM&lt;/div&gt;
+		&lt;div class=&quot;side front&quot;&gt;FRONT&lt;/div&gt;
+		&lt;div class=&quot;side back&quot;&gt;BACK&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>按钮等待动画</title>
+   <link href="http://www.jacoporabolini.com/emerald/posts/wait-animation"/>
+   <id>http://www.jacoporabolini.com/emerald/posts/wait-animation</id>
+   <updated>2015-08-04T00:00:00+08:00</updated>
+   <content type="html">&lt;p&gt;最近项目中遇到了这样一个问题：用户填写完成后点击提交按钮时，在点击和服务器返回数据之间的这一段时间，由于按钮没有任何反馈，用户以为没有触发点击事件，导致点击多次，事实上，这样会触发多次提交。这种交互，对于客户和开发人员都是不友好的，为了进一步增进用户体验，我们决定为按钮添加实时的反馈，以减少多次提交 这就涉及到了等待动画（当然，也可以用非动画），在强大的CSS3面前，这些已经是小菜一碟。以下是三种实现方法(有的是参考别人的):…&lt;/p&gt; &lt;h3 id=&quot;css3&quot;&gt;CSS3实现的提交等待动画：三种&lt;/h3&gt; &lt;p&gt;html&lt;/p&gt; &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;dotBtn&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;处理中&lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;dotting&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt; &lt;h4 id=&quot;box-shadow&quot;&gt;1、box-shadow实现&lt;/h4&gt; &lt;p&gt;这种方法的原理是：利用阴影叠加，横向分别设置一个，两个，三个阴影。&lt;/p&gt; &lt;p&gt;css&lt;/p&gt; &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.dotting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;inline&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>几种常见布局</title>
+   <link href="http://www.jacoporabolini.com/emerald/posts/popular-layouts"/>
+   <id>http://www.jacoporabolini.com/emerald/posts/popular-layouts</id>
+   <updated>2015-07-30T00:00:00+08:00</updated>
+   <content type="html">&lt;p&gt;这篇文章主要是对几种常见的网页布局进行了一个总结，以前在进行CSS布局的时候总是遇到哪个布局， 才去想怎么去实现，没有系统的总结过，导致 踩了很多坑，浪费了很多时间。所以最近抽空将自己能想到的几种常见的布局进行了一个总结， 可能还有很多没有考虑到得，以后想起了，或者在项目中 遇到再补充…&lt;/p&gt; &lt;h3 id=&quot;section&quot;&gt;几种常见的布局&lt;/h3&gt; &lt;h4 id=&quot;menucontent&quot;&gt;1、两列布局(一般是menu和content)&lt;/h4&gt; &lt;p&gt;html&lt;/p&gt; &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;container clearfix&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;menu&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;menu&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt; &lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;content&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;content&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt; &lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt; &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>Typograhy example</title>
+   <link href="http://www.jacoporabolini.com/emerald/posts/typography"/>
+   <id>http://www.jacoporabolini.com/emerald/posts/typography</id>
+   <updated>2015-03-19T00:00:00+08:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/emerald/img/img-test.png&quot; alt=&quot;Test&quot; title=&quot;Test&quot; /&gt; Lorem ipsum dolor sit amet, &lt;a href=&quot;http://www.example.com&quot;&gt;consectetur adipisicing&lt;/a&gt; elit. Id, aliquam magni et officiis nemo nihil aliquid placeat alias. Eum voluptates ducimus, nobis ex illum laboriosam quidem corrupti impedit ratione in voluptatum amet beatae facilis temporibus voluptate praesentium voluptatibus! At ab, iusto error amet eveniet...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>Code Syntax</title>
+   <link href="http://www.jacoporabolini.com/emerald/posts/code-syntax"/>
+   <id>http://www.jacoporabolini.com/emerald/posts/code-syntax</id>
+   <updated>2015-03-01T00:00:00+08:00</updated>
+   <content type="html">&lt;p&gt;To insert highlight code inside of a post, it’s enough to use some specific tags, has directly described into the &lt;a href=&quot;http://jekyllrb.com/docs/templates/#code-snippet-highlighting&quot;&gt;Jekyll documentation&lt;/a&gt;. In this way the code will be included into a &lt;code&gt;.highlight&lt;/code&gt; CSS class and will be highlight according to the &lt;a href=&quot;https://github.com/mojombo/tpw/blob/master/css/syntax.css&quot;&gt;syntax.scss&lt;/a&gt; file. This is the standard...</content>
+ </entry>
+
+ 
+
+</feed>

@@ -1,0 +1,12 @@
+/*- Custom style -*/
+
+// -- Put custom style under this point -- //
+.m_arclist{
+	.title{font-size:20px;margin-top:10px;}
+	.count{display:inline-block;margin-top:10px;margin-bottom:10px;font-size:12px;}
+	.archref{margin-right:40px;}
+	.date{float:right;}
+	&:first-child{
+		.title{margin-top:0px;}
+	}
+}
